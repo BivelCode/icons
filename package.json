@@ -1,0 +1,26 @@
+{
+  "name": "bivel-icons",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Bivelcode Icons monorepo tooling and generators",
+  "packageManager": "pnpm@11.13.0",
+  "homepage": "https://github.com/BivelCode/icons#readme",
+  "bugs": {
+    "url": "https://github.com/BivelCode/icons/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BivelCode/icons.git"
+  },
+  "author": "Bivelcode",
+  "license": "MIT",
+  "scripts": {},
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0",
+    "fantasticon": "^4.1.0",
+    "fast-xml-parser": "^5.10.0",
+    "handlebars": "^4.7.9",
+    "svgo": "^4.0.2",
+    "turbo": "^2.10.5"
+  }
+}
