@@ -33,12 +33,19 @@ const cssDir = path.join(ROOT, 'dist', 'bivelcode-icons', 'css');
 const distPackageDir = path.join(ROOT, 'dist', 'bivelcode-icons');
 const distMetadataDir = path.join(ROOT, 'dist', 'bivelcode-icons', 'metadata');
 
-// Metadata and configuration paths
-const unicodeRegistryPath = path.join(
-  ROOT,
-  'metadata',
-  'unicode-registry.json'
-);
+// Metadata directory (versioned, one JSON file per style)
+const metadataDir = path.join(ROOT, 'metadata');
+
+/**
+ * Path to the metadata file for a given style.
+ * @param {string} styleId
+ * @returns {string} absolute path to metadata/<styleId>.json
+ */
+function styleMetadataPath(styleId) {
+  return path.join(metadataDir, `${styleId}.json`);
+}
+
+// Configuration paths
 const stylesConfigPath = path.join(ROOT, 'configs', 'styles.config.js');
 
 module.exports = {
@@ -49,6 +56,7 @@ module.exports = {
   cssDir,
   distPackageDir,
   distMetadataDir,
-  unicodeRegistryPath,
+  metadataDir,
+  styleMetadataPath,
   stylesConfigPath,
 };
